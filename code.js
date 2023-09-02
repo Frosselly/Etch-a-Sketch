@@ -8,6 +8,7 @@ pixel.setAttribute("draggable", false);
 
 let size = 16;
 const color = [0, 0, 0];
+let selectedColor = "white";
 
 function createBoard(boardSize) {
     const boardMax = 576;
@@ -46,7 +47,7 @@ function draw(pixel){
         pixel.style.background = "rgb(" + randColor() +"," + randColor() + "," + randColor() + ")";
     }
     else if (isHolding) {
-        pixel.style.backgroundColor = "white"
+        pixel.style.backgroundColor = selectedColor
     }
 
 }
@@ -97,3 +98,13 @@ colorBtn.addEventListener("click", () => {
         isColoring = false;
     }
 })
+
+
+const colorPicker = document.querySelector("#colorPicker"); 
+
+function changeColor(e){
+    selectedColor = e.target.value;
+}
+
+colorPicker.addEventListener("input", changeColor);
+
