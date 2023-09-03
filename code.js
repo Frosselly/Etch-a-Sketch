@@ -3,12 +3,12 @@ const board = document.querySelector(".board");
 
 pixel.classList.add("pixel");
 pixel.classList.add("unselectable");
-pixel.style.cssText = "background-color: black;"
+pixel.style.cssText = "background-color: white;"
 pixel.setAttribute("draggable", false);
 
 let size = 16;
 const color = [0, 0, 0];
-let selectedColor = "white";
+let selectedColor = "black";
 
 function createBoard(boardSize) {
     const boardMax = 576;
@@ -43,10 +43,10 @@ function randColor()
 
 function draw(pixel){
 
-    if (isColoring && isHolding) {
+    if (isColoring) {
         pixel.style.background = "rgb(" + randColor() +"," + randColor() + "," + randColor() + ")";
     }
-    else if (isHolding) {
+    else{
         pixel.style.backgroundColor = selectedColor
     }
 
@@ -56,10 +56,12 @@ function addBoardEvents() {
     const pixels = document.querySelectorAll(".pixel");
     pixels.forEach((pixel) => {
         pixel.addEventListener("mouseover", () => {
-            draw(pixel)
+            if(isHolding)
+                draw(pixel)
         })
         pixel.addEventListener("click", () => {
             draw(pixel)
+            console.log("CLICKED")
         })
 
     })

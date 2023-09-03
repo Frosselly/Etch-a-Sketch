@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script type="text/javascript" src="./code.js" defer></script>
     <link rel="stylesheet" href="./style.css">
@@ -7,17 +8,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etchy</title>
 </head>
+
 <body class="unselectable">
+
     <h1>Etch-a-Sketch</h1>
-    <div class="board unselectable" draggable="false">
-        
+    <div class="content">
+        <div class="purple">
+            <div class="white">
+                <div class="purple">
+                    <div class="board unselectable" draggable="false"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="purple">
+            <div class="white">
+                <div class="purple">
+                    <div class="tools">
+                        <button class="clearBtn">Clear</button>
+                        <button class="sizeBtn">Change Canvas Size</button>
+                        <button class="rainbowBtn">Rainbow brush</button>
+
+                        <label>Canvas size:
+                            <input type="number" class="textBox" placeholder="16">
+                        </label>
+
+                        <label  class="color">
+                            <input type="color" value="#FFFFFF" id="colorPicker">
+                            <br>
+                            COLOR
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <button class="clearBtn">Clear</button>
-    <button class="sizeBtn">Change Canvas Size</button>
-    <button class="rainbowBtn">Rainbow brush</button>
-    <input type="number" class="textBox">
 
-    <input type="color" value="#FFFFFF" id="colorPicker">
+
+
 </body>
+
 </html>

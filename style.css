@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+Osmanya&display=swap');
+
+body{
+  display:flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  font-size: 48px;
+  color:#EC53B0;
+
+  margin: 32px;
+}
+
+h1:hover{
+  font-size: 60px;
+  margin: 25px;
+}
+
+.content{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  
+  gap: 32px;
+}
+
+body, .content{
+  background-color: #0a134d;
+}
+
+
 .board{
     width: 576px;
     height: 576px;
@@ -5,7 +41,32 @@
     display:flex;
     flex-wrap: wrap;
     min-width: 0;
+    border: 4px solid black;
 }
+
+.purple{
+  border: 8px solid #9D44C0;
+}
+.white{
+  border: 4px solid black;
+}
+
+
+.tools{
+  
+  display:flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 576px;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid black;
+}
+
+input[type='color'], .tools{
+  background-color: #4D2DB7;
+}
+
 
 .pixel{
     width: 36px;
@@ -26,15 +87,61 @@ input[type='color'] {
     width: 80px;
     height: 80px;
     border: none;
-    background-color: white;
   }
 
 input[type='color']::-webkit-color-swatch {
-    border: none;
-    border-radius: 50px;
+    border: 4px solid black;
+    /* border-radius: 50px; */
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   input[type='color']::-webkit-color-swatch-wrapper {
     padding: 0;
+  }
+
+  input[type='color']:hover{
+    box-shadow: rgba(255, 255, 255, 0.959) 0px 0px 6px 6px;
+  }
+
+  button{
+    width: 90%;
+    margin: 0 4px;
+    padding: 4px;
+    font-family: 'Noto Sans Osmanya', 'Courier New';
+    font-size: 18px;
+    font-weight: bold;
+
+    background-color: #EC53B0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 4px solid #9D44C0;
+    color:black;
+  }
+
+.textBox{
+  border: 4px solid black;
+}
+
+  .textBox, label{
+    font-family: 'Noto Sans Osmanya', 'Courier New';
+    font-size: 18px;
+    font-weight: bold;
+    width: 85%;
+    margin: 0 4px;
+    padding: 4px;
+  }
+
+  label{
+    padding: 0 8px;
+    width: auto;
+    color:#EC53B0
+  }
+
+  .color{
+    text-align: center;
+  }
+
+
+  button:hover{
+    /* opacity: 50%; */
+    background-color: white;
   }
